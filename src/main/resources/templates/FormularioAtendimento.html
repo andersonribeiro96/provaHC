@@ -12,9 +12,11 @@
 
 <body>
 
-
-
+<div>
 <div class="container">
+
+    <h4>Formulario de Atendimento</h4>
+
     <div class="row">
         <div class="input-field col s10">
             Nome do Paciente: <input type="text" th:field="${paciente.nomePaciente} " disabled>
@@ -34,26 +36,33 @@
 <form class="container" method="post" >
     <div class="row">
         <div class="input-field col s6">
-            Nome do Medico: <input type="text" value="" name="nomeMedico"/>
+            Nome do Medico: <input type="text" value="" name="nomeMedico" required/>
         </div>
         <div class="input-field col s4">
-            CRM: <input type="text" value="" name="crm"/>
+            CRM: <input type="text" value="" name="crm" required/>
         </div>
     </div>
     <div class="row">
         <div class="input-field col s10">
-            Descrição: <textarea class="materialize-textarea" name="descricao"></textarea>
+            Descrição: <textarea class="materialize-textarea" name="descricao" required></textarea>
         </div>
     </div>
     <div class="row">
         <div class="input-field col s10">
-            Sintomas: <textarea class="materialize-textarea" name="sintomas"></textarea>
+            Sintomas: <textarea class="materialize-textarea" name="sintomas" required></textarea>
         </div>
     </div>
     <button type="submit" class="waves-effect waves-light btn"> Salvar </button>
 
 </form>
+    <br>
+    <br>
+    <div class="container">
+        <a href="/" class="waves-effect waves-light btn"><i class="material-icons left">arrow_back</i>Voltar</a>
+    </div>
 
+
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
