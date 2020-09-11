@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Atendimento Hospital do coração</title>
+    
+</head>
+
+<body>
+
+<center><img src="assets/logo.png"></center>
+
+
+<table class="container">
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Atender Paciente</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="paciente : ${pacientes}">
+        <td><span th:text="${paciente.nomePaciente}"></span></td>
+        <td><span th:text="${paciente.cpf}"></span></td>
+        <td> <a class="waves-effect waves-light btn-small" th:href="@{/formulario/{id}(id=${paciente.cpf})}"><i class="material-icons right">content_paste</i>Atender</a></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>

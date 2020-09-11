@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Formulario de Atendimento</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="input-field col s10">
+            Nome do Paciente: <input type="text" th:field="${paciente.nomePaciente} " disabled>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s5">
+            CPF: <input type="text" th:field="${paciente.cpf} " disabled>
+        </div>
+        <div class="input-field col s5">
+            Telefone: <input type="text" th:field="${paciente.telefone}" disabled>
+        </div>
+    </div>
+
+</div>
+
+<form class="container" method="post" >
+    <div class="row">
+        <div class="input-field col s6">
+            Nome do Medico: <input type="text" value="" name="nomeMedico"/>
+        </div>
+        <div class="input-field col s4">
+            CRM: <input type="text" value="" name="crm"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s10">
+            Descrição: <textarea class="materialize-textarea" name="descricao"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s10">
+            Sintomas: <textarea class="materialize-textarea" name="sintomas"></textarea>
+        </div>
+    </div>
+    <button type="submit" class="waves-effect waves-light btn"> Salvar </button>
+
+</form>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
