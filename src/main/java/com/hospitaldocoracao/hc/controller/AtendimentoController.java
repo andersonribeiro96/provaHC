@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Optional;
 
 
-@Controller("/atendimento")
+@Controller
 public class AtendimentoController {
 
     @Autowired
